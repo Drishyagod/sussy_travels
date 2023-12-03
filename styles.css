@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Unique hover animations for each link */
+nav a:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+nav a:hover:nth-child(1) {
+    background-color: #3498db; /* Hover color for Home */
+}
+
+nav a:hover:nth-child(2) {
+    background-color: #e74c3c; /* Hover color for About Us */
+}
+
+nav a:hover:nth-child(3) {
+    background-color: #2ecc71; /* Hover color for Services */
+}
+
+nav a:hover:nth-child(4) {
+    background-color: #f39c12; /* Hover color for Contact */
+}
+
+nav a:hover:nth-child(5) {
+    background-color: #9b59b6; /* Hover color for Support */
+}
+
+section {
+    height: 80vh;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    height: 20vh;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
